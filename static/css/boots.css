@@ -82,6 +82,7 @@ th{
 #pie p{
     margin: 0;
     font-size: 1.2rem;
+    color: rgb(48, 236, 57) !important;
 }
 #pie .redes-sociales{
     display: flex;
