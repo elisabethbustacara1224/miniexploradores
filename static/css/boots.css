@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: verbana, Genevam, Tahoma, sans-serif;
+}
+body{
+    background: linear-gradient(135deg,rgba(19, 187, 13, 0.35),rgb(55, 177, 199));
+    color: white;
+    line-height: 1.6rem;
+    padding: 20px;
+    padding-top: 80px;
+}
+/* CONTENEDOR */
+#contenedor{
+    max-width: 1200px;
+    margin:auto;
+    background-color: rgb(24, 114, 150);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 30px rgb(37, 185, 17);
+}
+/*Cabecera*/
+#cabecera{
+    background: radial-gradient(rgba(30, 189, 201, 0.541),rgba(182, 27, 27, 0.452));
+    color: rgb(238, 238, 240);
+    padding: 30px;
+    border-radius: 20px;
+    text-shadow: 1px 1px 4px rgb(51, 83, 153);
+    margin-bottom: 20px;
+}
+#cabecera h1{
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
+/* articulos*/
+.articulo{
+    background-color: rgba(17, 122, 136, 0.904);
+    border-left: 6px solid rgb(79, 129, 163);
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+.articulo:hover{
+    transform: scale(1.02);
+}
+/*TABLA DE DATOS */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(32, 146, 161, 0.459);
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 10px 30px rgba(0,0,0,0,3);
+}
+th,td{
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgb(12, 12, 12);
+}
+th{
+    background-color: rgb(43, 151, 214);
+    font-weight: bold;
+}
+/*pie*/
+#pie {
+    text-align: center;
+    margin-top: 10px;
+    padding: 30px 20px;
+    background-color: black;
+    color: rgb(48, 236, 57);
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px rgb(48, 48, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+#pie p{
+    margin: 0;
+    font-size: 1.2rem;
+}
+#pie .redes-sociales{
+    display: flex;
+    gap: 25px;
+}
+#pie .redes-sociales a{
+    font-size: 2.5rem;
+    color: rgb(48, 236, 5);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+#pie .redes-sociales a:hover{
+    color: antiquewhite;
+    transform: scale(1.1);
+}
+/*SECCION DE VIDEOS MARQUESINA*/
+.videos-marquersina{
+    background: linear-gradient(rgb(161, 93, 14),rgb(10, 30, 116));
+    padding: 25px 20px;
+    margin-top: 40px;
+    margin-bottom: 40PX;
+    border-radius: 10px;
+    box-shadow: 2px 5px 20px yellow;
+    text-align: center;
+    color: aquamarine;
+
+}
+.videos-marquersina h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgb(250, 248, 248); 
+}
+.slider-marquesina{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.logos-track{
+    display: flex;
+    animation: scrollMarquesina 30s linear infinite;
+    gap: 40px;
+}
+.logos-track img{
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20px;
+    transition: transform 0.2s ease filter 0.3s ease box-shadow 0.3s ease;
+    background-color: rgb(23, 143, 151);
+    padding: 5px;
+    box-shadow: 2px 5px 20px rgb(34, 71, 173);
+}
+.logos-track img:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 5px 20px white;
+}
+@keyframes scrollMarquesina {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+/*AJUSTE RESPONCIVE*/
+@media(max-width_: 768px){
+    .logos-track img{
+        height: 120px;
+        border-radius: 10px;    
+    }
+    th,td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}
